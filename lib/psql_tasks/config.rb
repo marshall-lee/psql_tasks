@@ -51,5 +51,9 @@ module PsqlTasks
         sequel!
       end
     end
+
+    def self.use(&blk)
+      instance_eval(&blk)
+    end
   end
 end
