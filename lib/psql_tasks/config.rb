@@ -11,8 +11,8 @@ module PsqlTasks
     def self.command_line
       cmd = "psql"
       cmd << " -h #{host}" if host
-      cmd << " -U #{username}" if username
       cmd << " -p #{port}" if port
+      cmd << " -U #{username}" if username
       if database
         cmd << " -d #{database}"
       else
