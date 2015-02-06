@@ -1,4 +1,5 @@
 namespace :psql do
+  desc "Generates ~/.pgpass file for psql authentication"
   task :gen_pgpass do
     config = PsqlTasks::Config
 
