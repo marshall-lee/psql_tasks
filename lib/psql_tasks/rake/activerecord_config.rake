@@ -1,7 +1,8 @@
 namespace :psql do
   desc "Use ActiveRecord database configuration to use with psql tasks"
-  task :activerecord_config do
-    ar = ActiveRecord::Base.configurations[ActiveRecord::Tasks::DatabaseTasks.env]
+  task :activerecord_config, :db do |t, args|
+    db = args[:db] || ActiveRecord::Tasks::DatabaseTasks.env
+    ar = ActiveRecord::Base.configurations[db]
     fail "ActiveRecord adapter must be `postgresql`!" if ar["adapter"] != "postgresql"
 
     config = PsqlTasks::Config
