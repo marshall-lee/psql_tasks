@@ -1,6 +1,6 @@
 namespace :psql do
   desc "Generates ~/.pgpass file for psql authentication"
-  task :gen_pgpass do
+  task :gen_pgpass => 'psql:config' do
     PsqlTasks::Config.use do
       fail "You must specify `host`!"     unless host
       fail "You must specify `database`!" unless database
