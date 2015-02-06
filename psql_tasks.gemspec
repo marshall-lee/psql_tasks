@@ -7,8 +7,8 @@ Gem::Specification.new do |spec|
   spec.version       = '0.0.1'
   spec.authors       = ["Vladimir Kochnev"]
   spec.email         = ["hashtable@yandex.ru"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{Rake tasks for dealing with psql utility.}
+  spec.description   = %q{Rake tasks for dealing with psql utility.}
   spec.homepage      = ""
   spec.license       = "MIT"
 
