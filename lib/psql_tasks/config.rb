@@ -35,7 +35,7 @@ module PsqlTasks
 
     def self.sequel!(server=:default)
       sq = Sequel::Model.db.send(:server_opts, server)
-      fail "Sequel adapter must be `postgres`!" if sq["adapter"] != "postgres"
+      fail "Sequel adapter must be `postgres`!" if sq[:adapter] != "postgres"
 
       self.host     = sq[:host]     if sq.key? :host
       self.port     = sq[:port]     if sq.key? :port
