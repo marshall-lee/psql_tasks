@@ -1,5 +1,10 @@
 require 'psql_tasks'
 
+namespace :psql do
+  task :init do
+  end
+end
+
 load 'psql_tasks/rake/terminal.rake'
 load 'psql_tasks/rake/gen_pgpass.rake'
 load 'psql_tasks/rake/config.rake'

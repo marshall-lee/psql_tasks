@@ -3,4 +3,5 @@ namespace :psql do
   task :activerecord_config, :db do |t, args|
     PsqlTasks::Config.activerecord! args[:db]
   end
+  task :activerecord_config => 'psql:init'
 end

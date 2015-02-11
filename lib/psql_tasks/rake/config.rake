@@ -4,4 +4,5 @@ namespace :psql do
       PsqlTasks::Config.try_all!
     end
   end
+  task :config => 'psql:init'
 end
