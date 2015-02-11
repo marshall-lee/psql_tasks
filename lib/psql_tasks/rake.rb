@@ -1,3 +1,5 @@
+require 'psql_tasks'
+
 load 'psql_tasks/rake/terminal.rake'
 load 'psql_tasks/rake/gen_pgpass.rake'
 load 'psql_tasks/rake/config.rake'
