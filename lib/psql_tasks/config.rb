@@ -37,11 +37,11 @@ module PsqlTasks
       sq = Sequel::Model.db.send(:server_opts, server)
       fail "Sequel adapter must be `postgres`!" if sq["adapter"] != "postgres"
 
-      self.host     = sq["host"]     if sq.key? "host"
-      self.port     = sq["port"]     if sq.key? "port"
-      self.database = sq["database"] if sq.key? "database"
-      self.username = sq["username"] if sq.key? "username"
-      self.database = sq["password"] if sq.key? "password"
+      self.host     = sq[:host]     if sq.key? :host
+      self.port     = sq[:port]     if sq.key? :port
+      self.database = sq[:database] if sq.key? :database
+      self.username = sq[:username] if sq.key? :username
+      self.database = sq[:password] if sq.key? :password
     end
 
     def self.try_all!
