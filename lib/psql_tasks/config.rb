@@ -40,7 +40,7 @@ module PsqlTasks
       self.host     = sq[:host]     if sq.key? :host
       self.port     = sq[:port]     if sq.key? :port
       self.database = sq[:database] if sq.key? :database
-      self.username = sq[:username] if sq.key? :username
+      self.username = sq[:user]     if sq.key? :user
       self.password = sq[:password] if sq.key? :password
     end
 
