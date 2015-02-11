@@ -41,7 +41,7 @@ module PsqlTasks
       self.port     = sq[:port]     if sq.key? :port
       self.database = sq[:database] if sq.key? :database
       self.username = sq[:username] if sq.key? :username
-      self.database = sq[:password] if sq.key? :password
+      self.password = sq[:password] if sq.key? :password
     end
 
     def self.try_all!
