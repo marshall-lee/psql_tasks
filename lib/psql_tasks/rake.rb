@@ -14,3 +14,7 @@ load 'psql_tasks/rake/sequel_config.rake' if PsqlTasks.sequel?
 if PsqlTasks.padrino?
   task 'psql:init' => :environment
 end
+
+if PsqlTasks.activerecord?
+  task 'psql:init' => 'db:load_config'
+end
